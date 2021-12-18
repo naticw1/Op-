@@ -4,20 +4,20 @@ using namespace std ;
 void input (int d[], int n){
     srand(time(NULL));
     for ( int i = 0 ; i < n ; i++){
-        d[i] = rand()%500 - 100 ;
+        d[i] = rand()%500 - 100 ; //ініціалізація масиву із від'ємними значеннями
     }
 }
 void output(int d[], int n){
     for (int i = 0 ; i < n ; i++){
-        cout << d[i]<<"\t";
+        cout << d[i]<<"\t"; //вивід маиву для виразності
     }
 }
 void min_el ( int d[], int n, int &index1 ){
     int min;
     for (int i = 0; i < n; i++){
-        if ( (d[i] > 0) && (d[i] < d[index1])){
+        if ( (d[i] > 0) && (d[i] < d[index1])){ //умова для мінімального елемента
             min = d[i];
-            index1 = i;    
+            index1 = i; // індекс мінімального 
         }
     }
     cout << endl;
@@ -29,7 +29,7 @@ void max_el( int d[], int n, int &index2){
     for (int i = 0; i < n; i++){
         if (d[i] > d[index2] ){
             max = d[i];
-            index2 = i ;
+            index2 = i ;    // для зручності індекс максимального
         }
     }
 }
@@ -39,7 +39,7 @@ void replace (int d[] , int n, int &index1 , int &index2 ){
     d[index2] = x ;
     cout <<endl;
     for( int i = 0 ; i < n ; i++){
-        cout << d[i] <<"\t";
+        cout << d[i] <<"\t";    // вивід кінцевого масиву
     }
 }
 int main(){
